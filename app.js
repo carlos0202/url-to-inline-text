@@ -86,12 +86,7 @@ app.post("/fetch", async (req, res) => {
       throw new Error("File exceeds 10 MB limit");
     }
 
-    const isText = TEXT_TYPES.some(rx => rx.test(contentType));
     const isImage = IMAGE_TYPES.some(rx => rx.test(contentType));
-
-    if (!isText && !isImage) {
-      throw new Error(`Unsupported content-type: ${contentType}`);
-    }
 
     /* ---------- Image: use streaming proxy ---------- */
     if (isImage) {
