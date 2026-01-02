@@ -10,7 +10,8 @@ const TEXT_TYPES = [
   /^text\//,
   /^application\/json$/,
   /^application\/xml$/,
-  /^application\/javascript$/
+  /^application\/javascript$/,
+  /^application\/octet-stream&/
 ];
 
 const IMAGE_TYPES = [
